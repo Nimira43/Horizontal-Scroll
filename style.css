@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Shadows+Into+Light&family=Skranji&display=swap');
+
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    color: beige;
+    overflow: hidden;
+    background-color: #111;    
+}
+
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+}
+
+.section {
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    display: flex;
+}
+
+.page {
+    height: 700px;
+    width: 100vw;
+    display: flex;
+}
+
+.bubble,
+.bubble2 {
+    position: absolute;
+    z-index: -2;
+    width: 600px;
+    margin: -100px 15px;
+    filter: brightness(50%);
+    animation: movedown 30s infinite linear;
+}
+
+.bubble2 {
+    margin: 350px 650px;
+    animation: moveup 30s infinite linear;
+}
+
+@keyframes movedown {
+    50% {
+        margin: 400px 15px;
+        width: 450px;
+    }
+    100% {
+        width: 600px;
+        margin: -100px 15px;
+    }
+}
+
+@keyframes moveup {
+    50% {
+        margin: -100px 650px;
+        width: 450px;
+    }
+    100% {
+        width: 600px;
+        margin: 350px 650px;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.propic {
+    padding-top: 60px;
+    padding-right: 20px;
+    height: 700px;
+}
+
+h1 {
+    font-family: 'Shadows Into Light';
+    font-size: 70px;
+    padding-left: 20px;color: orangered;
+    text-shadow: 2px 2px 0 darkorange,
+                 8px 4px 0 black,
+                 3px 3px 0 khaki,
+                 2px 2px 0 orangered;
+    letter-spacing: 2px;
+}
+
+.box {
+    justify-content: center;
+    margin-left: 7px;
+    position: absolute;
+    animation: slideup 160s infinite linear;
+}
+
+@keyframes slideup {
+    1% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: -3000px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.template {
+    width: auto;
+    height: 1200px;
+    margin: 10px;
+}
+
+.logo-box,
+.contact-box {
+    width: 70%;
+    margin-left: 30%;
+}
+
+.logo {
+    padding-top: 40px;
+    height: 190px;
+}
+
+.contact-box div {
+    font-size: 50px;
+    color: orangered;
+    height: 110px;
+    text-align: left;
+    justify-content: center;
+    text-shadow: 2px 2px 0 darkorange,
+                 8px 4px 0 black,
+                 3px 3px 0 khaki,
+                 2px 2px 0 orangered;
+    letter-spacing: 2px;
+}
